@@ -1,0 +1,25 @@
+<div class="navbar navbar-default navbar-static-top" ng-controller="NavbarCtrl">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" ng-click="isCollapsed = !isCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">driver</a>
+    </div>
+    <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
+      <ul class="nav navbar-nav navbar-right">
+        <li ng-hide="isLoggedIn()"><a href="/signup">Apply</a></li>
+        <li ng-show="isLoggedIn()"><a href="/">Home</a></li>
+        <li><a href="/rates">Rates & Terms</a></li>
+        <li><a href="/about">About us</a></li>
+        <li><a href="/questions">Questions</a></li>
+        <li><a href="/contact">Contact us</a></li>
+        <li ng-hide="isLoggedIn()"><a href="/login">Login</a></li>
+        <li ng-show="isLoggedIn()"><a href="" ng-click="logout()">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
